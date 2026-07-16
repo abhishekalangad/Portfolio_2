@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Lottie from 'lottie-react';
+import studentAnimation from '../../assets/student with laptop.json';
 
 export const About = () => {
   return (
@@ -10,18 +12,18 @@ export const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="lg:col-span-5 relative"
+          className="lg:col-span-5 relative mb-16 md:mb-0"
         >
-          <div className="aspect-4/5 rounded-3xl overflow-hidden organic-shadow animate-float">
-            <img 
-              className="w-full h-full object-cover" 
-              alt="Abhishek K Portrait" 
-              src=""
+          <div className="aspect-4/5 rounded-3xl overflow-hidden organic-shadow bg-surface-container-low flex items-center justify-center p-4">
+            <Lottie 
+              animationData={studentAnimation} 
+              loop={true} 
+              className="w-full h-full max-h-[380px]"
             />
           </div>
-          <div className="absolute -bottom-8 -right-8 bg-surface-container-highest p-8 rounded-2xl organic-shadow">
+          <div className="absolute bottom-3 right-3 md:-bottom-8 md:-right-8 bg-surface-container-highest p-5 md:p-8 rounded-2xl organic-shadow">
             <span className="font-display-lg text-display-lg text-primary block">1.5+</span>
-            <span className="font-label-md text-on-surface-variant">Years of Internship</span>
+            <span className="font-label-md text-on-surface-variant text-xs md:text-base">Years of Internship</span>
           </div>
         </motion.div>
         

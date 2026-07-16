@@ -25,38 +25,62 @@ export const SideSocialBar = () => {
     }
   };
 
+  const links = [
+    {
+      type: 'anchor',
+      href: '#work',
+      icon: 'work',           // briefcase — matches "Work / Projects"
+      title: 'View Projects',
+    },
+    {
+      type: 'button',
+      icon: 'ios_share',      // native share icon — clean & modern
+      title: 'Share Portfolio',
+      onClick: handleShare,
+    },
+    {
+      type: 'anchor',
+      href: '#contact',
+      icon: 'contact_page',   // contact card — matches "Contact Me"
+      title: 'Contact Me',
+    },
+    {
+      type: 'anchor',
+      // mailto: opens default mail app BUT if user wants webmail we use Gmail directly
+      href: 'https://mail.google.com/mail/?view=cm&to=abhishekalangad@gmail.com',
+      target: '_blank',
+      icon: 'forward_to_inbox', // send-to-inbox arrow — distinct email send icon
+      title: 'Email Me',
+    },
+  ];
+
   return (
     <>
       <aside className="fixed left-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-6 items-center z-40">
         <div className="flex flex-col gap-6 items-center">
-          <a 
-            className="text-on-surface-variant opacity-60 hover:opacity-100 hover:scale-125 transition-all" 
-            href="#work"
-            title="View Projects"
-          >
-            <span className="material-symbols-outlined">code</span>
-          </a>
-          <button 
-            className="text-on-surface-variant opacity-60 hover:opacity-100 hover:scale-125 transition-all cursor-pointer bg-transparent border-none p-0 outline-none" 
-            onClick={handleShare}
-            title="Share Portfolio"
-          >
-            <span className="material-symbols-outlined">share</span>
-          </button>
-          <a 
-            className="text-on-surface-variant opacity-60 hover:opacity-100 hover:scale-125 transition-all" 
-            href="#contact"
-            title="Contact Me"
-          >
-            <span className="material-symbols-outlined">chat</span>
-          </a>
-          <a 
-            className="text-on-surface-variant opacity-60 hover:opacity-100 hover:scale-125 transition-all" 
-            href="mailto:hello@abhishekk.dev"
-            title="Email Me"
-          >
-            <span className="material-symbols-outlined">mail</span>
-          </a>
+          {links.map((link, i) =>
+            link.type === 'button' ? (
+              <button
+                key={i}
+                className="text-on-surface-variant opacity-60 hover:opacity-100 hover:text-primary hover:scale-125 transition-all cursor-pointer bg-transparent border-none p-0 outline-none"
+                onClick={link.onClick}
+                title={link.title}
+              >
+                <span className="material-symbols-outlined">{link.icon}</span>
+              </button>
+            ) : (
+              <a
+                key={i}
+                className="text-on-surface-variant opacity-60 hover:opacity-100 hover:text-primary hover:scale-125 transition-all"
+                href={link.href}
+                target={link.target}
+                rel={link.target === '_blank' ? 'noopener noreferrer' : undefined}
+                title={link.title}
+              >
+                <span className="material-symbols-outlined">{link.icon}</span>
+              </a>
+            )
+          )}
         </div>
         <div className="w-px h-24 bg-outline-variant"></div>
       </aside>

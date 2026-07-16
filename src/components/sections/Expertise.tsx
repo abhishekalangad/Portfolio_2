@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 import { SkillsBackground } from './SkillsBackground';
 
 const FrappeIcon = () => (
-  <svg className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="24" height="24" rx="6" fill="#0b5c3a" />
     <path d="M16 8H12V10H15V12H12V18H10V12H8V10H10V7C10 5.34315 11.3431 4 13 4H16V8Z" fill="white" />
   </svg>
 );
 
 const ERPNextIcon = () => (
-  <svg className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="24" height="24" rx="6" fill="#1b5ebe" />
     <path d="M7 7H17V9H9V11H15V13H9V15H17V17H7V7Z" fill="white" />
   </svg>
@@ -163,7 +163,7 @@ export const Expertise = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   
   // Responsive dimensions state
-  const [dimensions, setDimensions] = useState({ a: 360, b: 85, containerHeight: 400 });
+  const [dimensions, setDimensions] = useState({ a: 360, b: 85, containerHeight: 560 });
 
   // Handle window resizing to make the 3D atom fully responsive on all screens
   useEffect(() => {
@@ -171,13 +171,13 @@ export const Expertise = () => {
       const w = window.innerWidth;
       if (w < 480) {
         // Mobile screens: major axis 150px
-        setDimensions({ a: 150, b: 40, containerHeight: 280 });
+        setDimensions({ a: 150, b: 40, containerHeight: 320 });
       } else if (w < 768) {
         // Tablet screens: major axis 240px
-        setDimensions({ a: 240, b: 60, containerHeight: 340 });
+        setDimensions({ a: 240, b: 60, containerHeight: 440 });
       } else {
         // Desktop screens: 60% size (major axis 360px)
-        setDimensions({ a: 360, b: 85, containerHeight: 400 });
+        setDimensions({ a: 360, b: 85, containerHeight: 560 });
       }
     };
 
@@ -342,7 +342,7 @@ export const Expertise = () => {
   };
 
   return (
-    <section className="relative px-margin-mobile md:px-margin-desktop lg:pl-32 lg:pr-margin-desktop py-stack-lg bg-surface-container/10 overflow-hidden" id="expertise">
+    <section className="relative px-margin-mobile md:px-margin-desktop lg:pl-32 lg:pr-margin-desktop pt-stack-lg pb-16 md:pb-24 bg-surface-container/10 overflow-hidden" id="expertise">
       {/* Background connecting particle constellation canvas */}
       <SkillsBackground />
 

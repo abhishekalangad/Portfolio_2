@@ -4,7 +4,7 @@ import { HeroBackground } from './HeroBackground';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center py-stack-lg overflow-hidden">
+    <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center py-stack-lg overflow-hidden">
       <HeroBackground />
       <div className="max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop lg:pl-32 lg:pr-margin-desktop relative z-10">
         <div className="max-w-4xl">
@@ -25,7 +25,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="font-display-lg text-display-lg text-primary mb-6 leading-tight max-md:text-headline-lg-mobile"
+          className="text-3xl sm:text-5xl lg:text-display-lg font-display-lg text-primary mb-6 leading-tight"
         >
           Hi, I'm <span className="italic font-serif">ABHISHEK K</span>
         </motion.h1>
@@ -34,7 +34,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-headline-md text-headline-md text-primary/80 mb-4 max-w-2xl"
+          className="text-sm sm:text-base md:font-headline-md md:text-headline-md text-primary/80 mb-4 max-w-2xl"
         >
           Software Developer • ERPNext Developer • Python Developer • Full Stack Developer
         </motion.p>
@@ -52,15 +52,15 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-wrap gap-4"
+          className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
         >
-          <a className="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md hover:scale-105 transition-all flex items-center gap-2" href="#work">
+          <a className="bg-primary text-on-primary px-6 sm:px-8 py-4 rounded-lg font-label-md hover:scale-105 transition-all flex items-center justify-center gap-2 text-sm sm:text-base" href="#work">
             View Projects <span className="material-symbols-outlined">arrow_downward</span>
           </a>
-          <a className="border border-outline text-primary px-8 py-4 rounded-lg font-label-md hover:bg-surface-container transition-all backdrop-blur-sm" href="/resume.pdf" download>
+          <a className="border border-outline text-primary px-6 sm:px-8 py-4 rounded-lg font-label-md hover:bg-surface-container transition-all backdrop-blur-sm text-center text-sm sm:text-base" href="/resume.pdf" download>
             Download Resume
           </a>
-          <a className="border border-outline text-primary px-8 py-4 rounded-lg font-label-md hover:bg-surface-container transition-all backdrop-blur-sm" href="#contact">
+          <a className="border border-outline text-primary px-6 sm:px-8 py-4 rounded-lg font-label-md hover:bg-surface-container transition-all backdrop-blur-sm text-center text-sm sm:text-base" href="#contact">
             Contact Me
           </a>
         </motion.div>

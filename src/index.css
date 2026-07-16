@@ -1,6 +1,22 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+:root {
+  --color-primary: #163422;
+  --color-secondary: #556257;
+  --color-outline-variant: #c2c8c0;
+  --color-surface-container-low: #f4f4f0;
+  --color-surface-container-lowest: #ffffff;
+}
+
+.dark {
+  --color-primary: #adcfb4;
+  --color-secondary: #bccabd;
+  --color-outline-variant: #424843;
+  --color-surface-container-low: #1b1c1a;
+  --color-surface-container-lowest: #101010;
+}
+
 @layer base {
   body {
     @apply bg-background text-on-background font-body-md overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed;
@@ -79,4 +95,45 @@
 
 .skill-chip:hover {
   animation: pulse-chip 1.5s infinite ease-in-out;
+}
+
+/* Walking/climbing character animations */
+@keyframes walk-leg-1 {
+  0%, 100% { transform: rotate(-25deg); }
+  50% { transform: rotate(25deg); }
+}
+@keyframes walk-leg-2 {
+  0%, 100% { transform: rotate(25deg); }
+  50% { transform: rotate(-25deg); }
+}
+@keyframes walk-arm-front {
+  0%, 100% { transform: rotate(-20deg); }
+  50% { transform: rotate(20deg); }
+}
+@keyframes walk-arm-back {
+  0%, 100% { transform: rotate(20deg); }
+  50% { transform: rotate(-20deg); }
+}
+
+.animate-walk-leg-1 {
+  animation: walk-leg-1 0.8s infinite ease-in-out;
+}
+.animate-walk-leg-2 {
+  animation: walk-leg-2 0.8s infinite ease-in-out;
+}
+.animate-walk-arm-front {
+  animation: walk-arm-front 0.8s infinite ease-in-out;
+}
+.animate-walk-arm-back {
+  animation: walk-arm-back 0.8s infinite ease-in-out;
+}
+
+/* Pulsing stair landing glow rings */
+@keyframes stair-pulse {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  50% { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(0.8); opacity: 0; }
+}
+.animate-stair-pulse {
+  animation: stair-pulse 2s infinite ease-out;
 }

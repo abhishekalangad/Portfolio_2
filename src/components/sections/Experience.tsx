@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const Experience = () => {
   return (
     <section className="px-margin-mobile md:px-margin-desktop lg:pl-32 lg:pr-margin-desktop py-stack-lg max-w-container-max mx-auto">
-      <div className="mt-24">
+      <div className="mt-24 md:mt-32">
         <div className="flex flex-col items-center mb-16">
           <span className="text-primary/40 font-mono text-sm tracking-widest uppercase mb-2">Career Path</span>
           <h2 className="font-display-lg text-4xl md:text-5xl text-primary font-bold italic text-center">Professional Experience</h2>
