@@ -52,28 +52,6 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-wrap gap-6 mb-12"
-        >
-          <div className="flex flex-col">
-            <span className="font-display-lg text-3xl text-primary font-bold">1.5+</span>
-            <span className="font-label-md text-on-surface-variant text-sm">Years Experience</span>
-          </div>
-          <div className="w-px h-10 bg-outline-variant opacity-30 hidden md:block"></div>
-          <div className="flex flex-col">
-            <span className="font-display-lg text-3xl text-primary font-bold">ERP</span>
-            <span className="font-label-md text-on-surface-variant text-sm">ERPNext Expert</span>
-          </div>
-          <div className="w-px h-10 bg-outline-variant opacity-30 hidden md:block"></div>
-          <div className="flex flex-col">
-            <span className="font-display-lg text-3xl text-primary font-bold">Full Stack</span>
-            <span className="font-label-md text-on-surface-variant text-sm">Python & React</span>
-          </div>
-        </motion.div>
-        
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
           className="flex flex-wrap gap-4"
         >
           <a className="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md hover:scale-105 transition-all flex items-center gap-2" href="#work">

@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between items-center px-margin-desktop lg:pl-32 lg:pr-margin-desktop py-stack-lg gap-gutter max-w-container-max mx-auto max-md:px-margin-mobile">
         <div className="flex flex-col gap-4">
           <div className="font-headline-sm text-headline-sm text-primary">DevPortfolio</div>
-          <p className="font-body-md text-body-md text-on-surface-variant">© 2024 DevPortfolio. Built with intention.</p>
+          <p className="font-body-md text-body-md text-on-surface-variant">© 2026 DevPortfolio. Built with intention.</p>
         </div>
         <div className="flex gap-8">
           <a className="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4" href="#">Case Studies</a>

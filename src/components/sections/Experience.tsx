@@ -33,7 +33,7 @@ export const Experience = () => {
                 <div className="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-sm mb-2">
                   SEP 2025 — FEB 2026
                 </div>
-                <p className="text-on-surface-variant font-medium">Pune, India (Assimilate Technologies)</p>
+                <p className="text-on-surface-variant font-medium">(Assimilate Technologies) Pune, India </p>
               </motion.div>
               
               <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background -translate-x-1/2 z-10 hidden md:block group-hover:scale-150 transition-transform duration-300"></div>
@@ -66,7 +66,7 @@ export const Experience = () => {
                 <div className="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-sm mb-2">
                   APR 2023 — APR 2024
                 </div>
-                <p className="text-on-surface-variant font-medium">Kochi, India (Right Soft Options)</p>
+                <p className="text-on-surface-variant font-medium">(Right Soft Options) Kochi, India </p>
               </motion.div>
               
               <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background -translate-x-1/2 z-10 hidden md:block group-hover:scale-150 transition-transform duration-300"></div>

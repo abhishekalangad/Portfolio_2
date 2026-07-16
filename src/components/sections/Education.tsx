@@ -6,7 +6,7 @@ export const Education = () => {
     <section className="px-margin-mobile md:px-margin-desktop lg:pl-32 lg:pr-margin-desktop py-stack-lg max-w-container-max mx-auto" id="education">
       <div className="mb-16">
         <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Academic Background</h2>
-        <p className="text-on-surface-variant">The foundation of my engineering journey.</p>
+        <p className="text-on-surface-variant">The foundation of my journey.</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
         {/* Education Card 1 */}

@@ -16,7 +16,7 @@ export const About = () => {
             <img 
               className="w-full h-full object-cover" 
               alt="Abhishek K Portrait" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRtgntoXha_ZWGutv2w3uhAUcm5p-pBqkmTrVDSETb7VPxJ1BQJYJ9uZUviXUD2q1dP4-g4wu6y6i777Fdd87X0AC1SgrnOoHydSr6WZqyuCo1iaG91hlWP4VsgtrjqJInKALI_OFOXBgU9R0Z6kq29yMIP96Z36iYwkIslxiTjuRKXTod1z2Jiymrl3K4D3y_Skp6EHbmUSSuEgckvp_7HqGb2qwnffoK32YDl2l4hjplt0duJuq8"
+              src=""
             />
           </div>
           <div className="absolute -bottom-8 -right-8 bg-surface-container-highest p-8 rounded-2xl organic-shadow">
