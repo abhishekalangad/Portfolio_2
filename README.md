@@ -1,47 +1,42 @@
 # 🚀 Premium Developer Portfolio (React + TypeScript + Tailwind + Vite)
 
 <div align="center" style="margin: 30px 0;">
-  <!-- Main simulated device workspace -->
-  <div style="position: relative; width: 100%; max-width: 760px; padding-bottom: 40px;">
-    
-    <!-- 🖥️ Desktop Monitor Device Frame -->
-    <div style="width: 100%; max-width: 680px; margin: 0 auto; background: #121212; border: 10px solid #2d2d2d; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.35); overflow: hidden; display: flex; flex-direction: column;">
-      <!-- Mock Browser Header -->
-      <div style="background: #1e1e1e; padding: 8px 12px; display: flex; align-items: center; gap: 8px; border-bottom: 2px solid #121212;">
-        <div style="display: flex; gap: 5px;">
-          <span style="width: 8px; height: 8px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
-          <span style="width: 8px; height: 8px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
-          <span style="width: 8px; height: 8px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
-        </div>
-        <div style="flex: 1; background: #0c0c0c; border-radius: 4px; font-family: monospace; font-size: 10px; color: #8a8a8a; padding: 4px 8px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-          https://abhishek-k-portfolio.vercel.app
-        </div>
-      </div>
-      <!-- Interactive Web Page Viewport -->
-      <div style="position: relative; width: 100%; height: 350px; background: #fff;">
-        <iframe src="https://abhishek-k-portfolio.vercel.app" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" scrolling="yes"></iframe>
-      </div>
-    </div>
-    
-    <!-- Monitor Stand & Base -->
-    <div style="width: 110px; height: 35px; background: #252525; margin: 0 auto; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);"></div>
-    <div style="width: 180px; height: 4px; background: #1c1c1c; margin: 0 auto; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>
-
-    <!-- 📱 Mobile Phone Device Frame (Floating Overlapping Preview) -->
-    <div style="position: absolute; bottom: 10px; right: 0; width: 180px; height: 360px; background: #121212; border: 8px solid #2d2d2d; border-radius: 28px; box-shadow: 0 25px 50px rgba(0,0,0,0.45); overflow: hidden; display: flex; flex-direction: column; z-index: 100;">
-      <!-- Mock phone notch -->
-      <div style="background: #2d2d2d; height: 12px; width: 80px; margin: 0 auto; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 150;"></div>
-      <!-- Interactive Web Page Viewport -->
-      <div style="flex: 1; width: 100%; height: 100%; position: relative; background: #fff; padding-top: 10px;">
-        <iframe src="https://abhishek-k-portfolio.vercel.app" style="position: absolute; top: 10px; left: 0; width: 100%; height: 100%; border: none;" scrolling="yes"></iframe>
-      </div>
-      {/* Home Indicator line */}
-      <div style="background: #121212; padding: 4px 0; display: flex; justify-content: center; align-items: center;">
-        <span style="width: 60px; height: 3px; border-radius: 10px; background: #555;"></span>
-      </div>
-    </div>
-
-  </div>
+<div style="position: relative; width: 100%; max-width: 760px; padding-bottom: 40px;">
+<!-- 🖥️ Desktop Monitor Device Frame -->
+<div style="width: 100%; max-width: 680px; margin: 0 auto; background: #121212; border: 10px solid #2d2d2d; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.35); overflow: hidden; display: flex; flex-direction: column;">
+<!-- Mock Browser Header -->
+<div style="background: #1e1e1e; padding: 8px 12px; display: flex; align-items: center; gap: 8px; border-bottom: 2px solid #121212;">
+<div style="display: flex; gap: 5px;">
+<span style="width: 8px; height: 8px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
+<span style="width: 8px; height: 8px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
+<span style="width: 8px; height: 8px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
+</div>
+<div style="flex: 1; background: #0c0c0c; border-radius: 4px; font-family: monospace; font-size: 10px; color: #8a8a8a; padding: 4px 8px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+https://abhishek-k-portfolio.vercel.app
+</div>
+</div>
+<!-- Interactive Web Page Viewport -->
+<div style="position: relative; width: 100%; height: 350px; background: #fff;">
+<iframe src="https://abhishek-k-portfolio.vercel.app" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" scrolling="yes"></iframe>
+</div>
+</div>
+<!-- Monitor Stand & Base -->
+<div style="width: 110px; height: 35px; background: #252525; margin: 0 auto; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);"></div>
+<div style="width: 180px; height: 4px; background: #1c1c1c; margin: 0 auto; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>
+<!-- 📱 Mobile Phone Device Frame (Floating Overlapping Preview) -->
+<div style="position: absolute; bottom: 10px; right: 0; width: 180px; height: 360px; background: #121212; border: 8px solid #2d2d2d; border-radius: 28px; box-shadow: 0 25px 50px rgba(0,0,0,0.45); overflow: hidden; display: flex; flex-direction: column; z-index: 100;">
+<!-- Mock phone notch -->
+<div style="background: #2d2d2d; height: 12px; width: 80px; margin: 0 auto; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 150;"></div>
+<!-- Interactive Web Page Viewport -->
+<div style="flex: 1; width: 100%; height: 100%; position: relative; background: #fff; padding-top: 10px;">
+<iframe src="https://abhishek-k-portfolio.vercel.app" style="position: absolute; top: 10px; left: 0; width: 100%; height: 100%; border: none;" scrolling="yes"></iframe>
+</div>
+<!-- Home Indicator line -->
+<div style="background: #121212; padding: 4px 0; display: flex; justify-content: center; align-items: center;">
+<span style="width: 60px; height: 3px; border-radius: 10px; background: #555;"></span>
+</div>
+</div>
+</div>
 </div>
 
 A modern, highly interactive, and visually stunning developer portfolio tailored for Full-Stack Developers, Python Engineers, and ERPNext/Frappe specialists. It features scroll-spy navigation, a 3D atomic orbits skills display, an interactive work terminal timeline, and live browser mocks for projects.
