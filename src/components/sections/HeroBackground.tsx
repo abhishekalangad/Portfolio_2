@@ -13,7 +13,7 @@ export const HeroBackground = () => {
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-    camera.position.z = 5;
+    camera.position.z = width < 768 ? 7.5 : 5.0;
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -91,6 +91,7 @@ export const HeroBackground = () => {
         const w = container.clientWidth || window.innerWidth;
         const h = container.clientHeight || window.innerHeight;
         camera.aspect = w / h;
+        camera.position.z = w < 768 ? 7.5 : 5.0;
         camera.updateProjectionMatrix();
         renderer.setSize(w, h);
     };
