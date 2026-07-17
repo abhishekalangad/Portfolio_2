@@ -357,7 +357,7 @@ export const Expertise = () => {
         >
           <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Core Stack</h2>
           <p className="text-on-surface-variant max-w-xl mx-auto font-body-md">
-            Interactive atomic orbits. Click and drag anywhere to rotate the orbits, or hover over a skill to slow down rotation.
+            My core tech stack spanning frontend development, robust backends, and custom ERPNext/Frappe enterprise solutions. Click and drag anywhere to rotate.
           </p>
         </motion.div>
 
@@ -372,7 +372,7 @@ export const Expertise = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           style={{ height: dimensions.containerHeight }}
-          className={`w-full max-w-[800px] mt-36 md:mt-44 mx-auto relative flex items-center justify-center overflow-visible select-none ${
+          className={`w-full max-w-[800px] mt-16 md:mt-32 mx-auto relative flex items-center justify-center overflow-visible select-none ${
             isDragActive ? 'cursor-grabbing' : 'cursor-grab'
           }`}
         >

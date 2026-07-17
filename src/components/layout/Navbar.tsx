@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import resumePdf from '../../assets/resume.pdf';
 
 const NAV_LINKS = [
   { label: 'About',     href: '#about' },
@@ -15,7 +16,7 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Active section scroll-spy via IntersectionObserver
-  const [activeSection, setActiveSection] = useState('work');
+  const [activeSection, setActiveSection] = useState('about');
 
   useEffect(() => {
     const sectionIds = NAV_LINKS.map((l) => l.href.slice(1));
@@ -86,7 +87,7 @@ export const Navbar = () => {
       <header className="sticky top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm">
         <nav className="flex justify-between items-center px-4 sm:px-margin-desktop lg:pl-32 lg:pr-margin-desktop py-4 max-w-container-max mx-auto">
           {/* Logo */}
-          <div className="font-headline-md text-headline-md font-bold text-primary flex items-center select-none min-h-[32px] shrink-0">
+          <div className="font-headline-md text-headline-md font-bold text-primary flex items-center select-none min-h-[32px] shrink-0 min-w-[160px]">
             <span>{logoText}</span>
             <motion.span
               animate={{ opacity: [0, 1, 0] }}
@@ -124,8 +125,9 @@ export const Navbar = () => {
           {/* Right: Resume button + Hamburger */}
           <div className="flex items-center gap-3">
             <a
-              href="/resume.pdf"
-              download
+              href={resumePdf}
+              target="_blank"
+              rel="noreferrer"
               className="bg-primary text-on-primary px-5 py-2 rounded-lg font-label-md text-label-md hover:scale-105 transition-all text-sm hidden sm:inline-flex items-center gap-1"
             >
               Resume
@@ -187,8 +189,8 @@ export const Navbar = () => {
                   );
                 })}
                 <a
-                  href="/resume.pdf"
-                  download
+                  href={resumePdf}
+                  download="Abhishek_Resume.pdf"
                   onClick={handleLinkClick}
                   className="mt-2 bg-primary text-on-primary px-5 py-3 rounded-xl font-label-md text-center text-sm font-semibold hover:opacity-90 transition-all"
                 >

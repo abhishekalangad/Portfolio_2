@@ -30,14 +30,16 @@ const educationData = [
 
 export const Education = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const staircaseRef = useRef<HTMLDivElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
   });
 
   const { scrollYProgress: mobileScrollProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
+    target: staircaseRef,
+    offset: ["start 90%", "end 20%"]
   });
 
   const [isDesktop, setIsDesktop] = useState(() => {
@@ -57,6 +59,7 @@ export const Education = () => {
   }, []);
 
   const progressToUse = isDesktop ? scrollYProgress : mobileScrollProgress;
+
 
   // 1. Generate 3D blocks with flat horizontal landing platforms (matching horizontal steps)
   // Flight 1 Blocks: 11 steps climbing up-left
@@ -176,8 +179,8 @@ export const Education = () => {
   const gradConfettiTransform = useMotionTemplate`translate(197px, ${gradConfettiY}px)`;
 
   // BCA Card Scroll Highlights (glow and scale)
-  const bcaScale = useTransform(progressToUse, [0.15, 0.35, 0.52, 0.62], [1, 1.03, 1.03, 1]);
-  const bcaBorderColor = useTransform(progressToUse,
+  const bcaScale = isDesktop ? useTransform(progressToUse, [0.15, 0.35, 0.52, 0.62], [1, 1.03, 1.03, 1]) : 1;
+  const bcaBorderColor = isDesktop ? useTransform(progressToUse,
     [0.15, 0.35, 0.52, 0.62],
     [
       "rgba(194, 200, 192, 0.2)",
@@ -185,8 +188,8 @@ export const Education = () => {
       "rgba(22, 52, 34, 0.45)",
       "rgba(194, 200, 192, 0.2)"
     ]
-  );
-  const bcaShadow = useTransform(progressToUse,
+  ) : "rgba(194, 200, 192, 0.2)";
+  const bcaShadow = isDesktop ? useTransform(progressToUse,
     [0.15, 0.35, 0.52, 0.62],
     [
       "0px 0px 0px rgba(0,0,0,0)",
@@ -194,11 +197,11 @@ export const Education = () => {
       "0px 12px 24px rgba(22, 52, 34, 0.05)",
       "0px 0px 0px rgba(0,0,0,0)"
     ]
-  );
+  ) : "0px 12px 24px rgba(22, 52, 34, 0.02)";
 
   // MCA Card Scroll Highlights (glow and scale)
-  const mcaScale = useTransform(progressToUse, [0.55, 0.72, 0.88, 0.95], [1, 1.03, 1.03, 1]);
-  const mcaBorderColor = useTransform(progressToUse,
+  const mcaScale = isDesktop ? useTransform(progressToUse, [0.55, 0.72, 0.88, 0.95], [1, 1.03, 1.03, 1]) : 1;
+  const mcaBorderColor = isDesktop ? useTransform(progressToUse,
     [0.55, 0.72, 0.88, 0.95],
     [
       "rgba(194, 200, 192, 0.2)",
@@ -206,8 +209,8 @@ export const Education = () => {
       "rgba(22, 52, 34, 0.45)",
       "rgba(194, 200, 192, 0.2)"
     ]
-  );
-  const mcaShadow = useTransform(progressToUse,
+  ) : "rgba(194, 200, 192, 0.2)";
+  const mcaShadow = isDesktop ? useTransform(progressToUse,
     [0.55, 0.72, 0.88, 0.95],
     [
       "0px 0px 0px rgba(0,0,0,0)",
@@ -215,7 +218,8 @@ export const Education = () => {
       "0px 12px 24px rgba(22, 52, 34, 0.05)",
       "0px 0px 0px rgba(0,0,0,0)"
     ]
-  );
+  ) : "0px 12px 24px rgba(22, 52, 34, 0.02)";
+
 
   const bca = educationData[1]; // BCA (2020-2023)
   const mca = educationData[0]; // MCA (2023-2026)
@@ -350,7 +354,7 @@ export const Education = () => {
                   </motion.g>
 
                   {/* Realistic Silhouette Character walking up the stairs (no hat, dark forest green silhouette) */}
-                  <motion.g transform={characterTransform}>
+                  <motion.g style={{ x: characterX, y: characterY }}>
                     {/* Head */}
                     <circle cx="0" cy="-34" r="5" fill="#0d2719" />
 
@@ -461,8 +465,7 @@ export const Education = () => {
       </div>
 
       <div className="flex flex-col gap-10">
-        {/* Staircase Visual Graphic at top */}
-        <div className="bg-linear-to-b from-[#1b3d2b] to-[#122b1f] dark:from-[#0c1f15] dark:to-[#050f0a] border border-outline-variant/10 rounded-3xl p-6 relative flex items-center justify-center min-h-[300px] shadow-2xl">
+        <div ref={staircaseRef} className="bg-linear-to-b from-[#1b3d2b] to-[#122b1f] dark:from-[#0c1f15] dark:to-[#050f0a] border border-outline-variant/10 rounded-3xl p-6 relative flex items-center justify-center min-h-[220px] sm:min-h-[300px] shadow-2xl">
           <svg viewBox="0 0 600 460" className="w-full h-auto overflow-visible select-none max-w-[420px]">
             <defs>
               <linearGradient id="side-grad-m-1" x1="0" y1="0" x2="0" y2="1">
@@ -567,7 +570,7 @@ export const Education = () => {
             </motion.g>
 
             {/* Climbing Silhouette Character */}
-            <motion.g transform={characterTransform}>
+            <motion.g style={{ x: characterX, y: characterY }}>
               <circle cx="0" cy="-34" r="5" fill="#0d2719" />
               <path d="M -4,-28 L 4,-28 L 3,-16 L -3,-16 Z" fill="#0d2719" />
               <motion.line 

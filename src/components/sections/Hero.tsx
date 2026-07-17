@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HeroBackground } from './HeroBackground';
+import resumePdf from '../../assets/resume.pdf';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center py-stack-lg overflow-hidden">
+    <section className="relative min-h-0 md:min-h-[90vh] flex items-center py-16 md:py-stack-lg overflow-hidden">
       <HeroBackground />
       <div className="max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop lg:pl-32 lg:pr-margin-desktop relative z-10">
         <div className="max-w-4xl">
@@ -57,7 +58,7 @@ export const Hero = () => {
           <a className="bg-primary text-on-primary px-6 sm:px-8 py-4 rounded-lg font-label-md hover:scale-105 transition-all flex items-center justify-center gap-2 text-sm sm:text-base" href="#work">
             View Projects <span className="material-symbols-outlined">arrow_downward</span>
           </a>
-          <a className="border border-outline text-primary px-6 sm:px-8 py-4 rounded-lg font-label-md hover:bg-surface-container transition-all backdrop-blur-sm text-center text-sm sm:text-base" href="/resume.pdf" download>
+          <a className="border border-outline text-primary px-6 sm:px-8 py-4 rounded-lg font-label-md hover:bg-surface-container transition-all backdrop-blur-sm text-center text-sm sm:text-base" href={resumePdf} download="Abhishek_Resume.pdf">
             Download Resume
           </a>
           <a className="border border-outline text-primary px-6 sm:px-8 py-4 rounded-lg font-label-md hover:bg-surface-container transition-all backdrop-blur-sm text-center text-sm sm:text-base" href="#contact">

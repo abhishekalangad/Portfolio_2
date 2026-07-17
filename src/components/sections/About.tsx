@@ -12,7 +12,7 @@ export const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="lg:col-span-5 relative mb-16 md:mb-0"
+          className="lg:col-span-5 relative mb-0"
         >
           <div className="aspect-4/5 rounded-3xl overflow-hidden organic-shadow bg-surface-container-low flex items-center justify-center p-4">
             <Lottie 
@@ -32,11 +32,11 @@ export const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="lg:col-span-7 lg:pl-12 max-lg:mt-12"
+          className="lg:col-span-7 lg:pl-12"
         >
           <h2 className="font-headline-lg text-headline-lg text-primary mb-6">Rooted in code, focused on growth.</h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
-            As an MCA Student and passionate Software Developer, I believe that enterprise software doesn't have to be cold—it can be as intuitive and beautiful as any consumer app. My journey encompasses ERPNext, Python, Full Stack development, and Cloud automation, always focusing on robust problem-solving.
+            As an MCA Student and passionate Software Developer, I believe that enterprise software doesn't have to be cold—it can be as intuitive and beautiful as any consumer app. My journey encompasses Python, Full Stack development and ERPNext always focusing on robust problem-solving.
           </p>
           <div className="grid grid-cols-2 gap-gutter">
             <div className="p-6 rounded-2xl bg-surface-container-low">
