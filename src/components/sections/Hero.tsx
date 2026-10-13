@@ -22,6 +22,7 @@ export const Hero = () => {
           Available for New Projects
         </motion.div> */}
         
+        
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
