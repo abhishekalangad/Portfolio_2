@@ -372,7 +372,7 @@ export const Expertise = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           style={{ height: dimensions.containerHeight }}
-          className={`w-full max-w-[800px] mt-16 md:mt-32 mx-auto relative flex items-center justify-center overflow-visible select-none ${
+          className={`w-full max-w-200 mt-16 md:mt-32 mx-auto relative flex items-center justify-center overflow-visible select-none ${
             isDragActive ? 'cursor-grabbing' : 'cursor-grab'
           }`}
         >

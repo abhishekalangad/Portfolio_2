@@ -18,7 +18,7 @@ export const About = () => {
             <Lottie 
               animationData={studentAnimation} 
               loop={true} 
-              className="w-full h-full max-h-[380px]"
+              className="w-full h-full max-h-95"
             />
           </div>
           <div className="absolute bottom-3 right-3 md:-bottom-8 md:-right-8 bg-surface-container-highest p-5 md:p-8 rounded-2xl organic-shadow">

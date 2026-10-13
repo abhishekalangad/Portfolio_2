@@ -9,7 +9,7 @@ export const Hero = () => {
       <HeroBackground />
       <div className="max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop lg:pl-32 lg:pr-margin-desktop relative z-10">
         <div className="max-w-4xl">
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -20,7 +20,7 @@ export const Hero = () => {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
           </span>
           Available for New Projects
-        </motion.div>
+        </motion.div> */}
         
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
@@ -37,7 +37,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-sm sm:text-base md:font-headline-md md:text-headline-md text-primary/80 mb-4 max-w-2xl"
         >
-          Software Developer • ERPNext Developer • Python Developer • Full Stack Developer
+          Junior Software Developer • ERPNext Developer • Python Developer • Full Stack Developer
         </motion.p>
         
         <motion.p 

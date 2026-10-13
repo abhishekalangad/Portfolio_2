@@ -3,6 +3,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const experiences = [
   {
+    role: "Junior Software Developer",
+    company: "Elrics Wisdom Pvt. Ltd.",
+    location: "Kottayam, Kerala, India",
+    period: "Oct 2026 — Present",
+    color: "#3776ab",
+    icon: "terminal",
+    tech: ["Next.js", "NestJS", "Node.js", "Python", "FastAPI", "PostgreSQL", "SRS / IA", "QA & UAT", "REST APIs"],
+    bullets: [
+      "Architected and developed modular full-stack SaaS features using Next.js for client interfaces and NestJS / Node.js & FastAPI for scalable backend microservices.",
+      "Authored comprehensive SRS (Software Requirements Specification) documents and structured Information Architecture (IA) diagrams to map user workflows and system design.",
+      "Spearheaded QA documentation, functional test cases, bug tracking, and UAT validation to uphold rigorous product quality standards before client deployments.",
+      "Designed robust database schemas, secure authentication mechanisms, and optimized high-performance REST APIs across SaaS modules."
+    ]
+  },
+  {
     role: "ERPNext Developer Intern",
     company: "Assimilate Technologies",
     location: "Pune, India",
@@ -98,7 +113,7 @@ export const Experience = () => {
         </div>
 
         {/* Right Column: Viewport Details Panel */}
-        <div className="flex-1 w-full min-h-[360px]">
+        <div className="flex-1 w-full min-h-90">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIdx}
